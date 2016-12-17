@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Hapi = require('hapi');
 const routes = require("./routes");
 
@@ -15,5 +16,5 @@ server.start((error) => {
     if (error){
         throw error
     }
-    console.log(`Server running: ${server.info.uri}`)
+    console.log(`Server running: ${server.info.uri}`);
 });
