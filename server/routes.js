@@ -3,9 +3,20 @@ function registerRoutes(server){
         method: "GET",
         path: "/",
         handler: (request, reply) => {
-            reply("I'm alive yo");
+            reply.file("./server/static/index.html");
         }
     });
+
+    server.route({
+        method: "GET",
+        path: "/static/{param*}",
+        handler: {
+            directory: {
+                path: "./server/static",
+                index: true,
+            }
+        }
+    })
 }
 
 module.exports = {registerRoutes};
