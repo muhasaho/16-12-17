@@ -1,5 +1,6 @@
 .idea
 .env
+server/static/bundle.js
 
 gs
 logs

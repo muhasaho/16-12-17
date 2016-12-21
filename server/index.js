@@ -7,7 +7,7 @@ const inertPlugin = require("inert");
 // setup server
 const server = new Hapi.Server();
 server.connection({
-    port: 8080,
+    port: 3000,
 });
 
 server.register([inertPlugin], (error) => {
