@@ -5,6 +5,15 @@ module.exports = {
         publicPath: "/static",              //virtual location of bundle during dev
         filename: "bundle.js"               //name of the bundle
     },
+
+    module: {
+        loaders: [
+            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+        ]
+    },
+
+    devtool: "cheap-module-source-map",     //source maps
+
     devServer: {
         contentBase: "./server/static",     //index.html lives here
         inline: true,                       //enable automatic refreshing
