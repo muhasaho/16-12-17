@@ -1,3 +1,4 @@
+const cssnext = require('postcss-cssnext');
 module.exports = {
     entry: "./client/index.js",             //root js
     output: {
@@ -8,9 +9,27 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader",
+                query: {
+                    cacheDirectory: true
+                }
+            },
+            {
+                test: /\.css$/,
+                //use css modules to make styles local
+                //use postcss with cssnext to auto-prefix and use future css
+                //use style-loader to load embed styles in the bundle
+                loader: "style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!postcss-loader"
+            },
         ]
     },
+
+    postcss: [
+        cssnext({ browsers: ['last 2 versions'] })
+    ],
 
     devtool: "cheap-module-source-map",     //source maps
 

@@ -1,0 +1,8 @@
+:root{
+    --color-gray: gray
+}
+
+.container{
+    background: rebeccapurple;
+    color: var(--color-gray);
+}
