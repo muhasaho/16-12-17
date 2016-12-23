@@ -1,0 +1,9 @@
+.container{
+    /*width: 50%;*/
+    /*height: 50%;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1;
+    border: 1px solid white;
+}

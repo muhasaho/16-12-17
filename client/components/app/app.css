@@ -3,6 +3,13 @@
 }
 
 .container{
-    background: rebeccapurple;
-    color: var(--color-gray);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    height: 50%;
+    display: flex;
 }

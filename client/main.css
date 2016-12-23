@@ -3,6 +3,12 @@ html body{
     height: 100vh;
 }
 
+:global #root{
+    height: 100%;
+
+}
+
+
 body{
     background: #2c2626;
     color: white;
