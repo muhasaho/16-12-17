@@ -4,7 +4,12 @@ import BaseTile from '../base-tile'
 
 const App = () =>
 <div className={styles.container}>
- ehh
+    <div className={styles.background}></div>
+    <div className={styles.innerContainer}>
+        <div className={styles.panel}>
+
+        </div>
+    </div>
 </div>;
 
 export default App;
