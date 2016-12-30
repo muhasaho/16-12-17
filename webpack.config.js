@@ -24,6 +24,10 @@ module.exports = {
                 //use style-loader to load embed styles in the bundle
                 loader: "style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!postcss-loader"
             },
+            {
+                test: /\.(png|jpg)$/,
+                loader: "url-loader",
+            },
         ]
     },
 

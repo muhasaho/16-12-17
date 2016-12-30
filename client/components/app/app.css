@@ -7,6 +7,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    background: url("./bg2.jpg") no-repeat center center fixed;
+    filter: blur(20px);
 }
 
 .row{
