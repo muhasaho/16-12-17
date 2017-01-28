@@ -1,16 +1,26 @@
 import React from 'react'
 import styles from './app.css'
 import BaseTile from '../base-tile'
+import Toggle from '../toggle'
 
-const App = () =>
-<div className={styles.container}>
-    <div className={styles.background}></div>
-    <div className={styles.innerContainer}>
-        <div className={styles.panel}>
-
-        </div>
-    </div>
-</div>;
+class App extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {on: false}
+    }
+    render(){
+        return(
+            <div className={styles.container}>
+                <div className={styles.background}></div>
+                <div className={styles.innerContainer}>
+                    <div className={styles.panel}>
+                        <Toggle on={this.state.on} onClick={val => this.setState({on: val})}/>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
 
 export default App;
 //
