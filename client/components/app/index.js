@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './app.css'
 import BaseTile from '../base-tile'
 import Toggle from '../toggle'
+import Tile from '../tile'
 
 class App extends React.Component{
     constructor(props){
@@ -13,9 +14,9 @@ class App extends React.Component{
             <div className={styles.container}>
                 <div className={styles.background}></div>
                 <div className={styles.innerContainer}>
-                    <div className={styles.panel}>
+                    <Tile>
                         <Toggle on={this.state.on} onClick={val => this.setState({on: val})}/>
-                    </div>
+                    </Tile>
                 </div>
             </div>
         )
