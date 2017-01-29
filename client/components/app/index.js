@@ -14,9 +14,21 @@ class App extends React.Component{
             <div className={styles.container}>
                 <div className={styles.background}></div>
                 <div className={styles.innerContainer}>
-                    <Tile>
-                        <Toggle on={this.state.on} onClick={val => this.setState({on: val})}/>
-                    </Tile>
+                    <div className={styles.tileContainer}>
+                        <Tile>
+                            <Toggle on={this.state.on} onClick={val => this.setState({on: val})}/>
+                        </Tile>
+                    </div>
+                    <div className={styles.tileContainer}>
+                        <Tile>
+                            <Toggle on={this.state.on} onClick={val => this.setState({on: val})}/>
+                        </Tile>
+                    </div>
+                    <div className={styles.tileContainer}>
+                        <Tile>
+                            <Toggle on={this.state.on} onClick={val => this.setState({on: val})}/>
+                        </Tile>
+                    </div>
                 </div>
             </div>
         )
@@ -24,12 +36,3 @@ class App extends React.Component{
 }
 
 export default App;
-//
-// <div className={styles.row}>
-//     <BaseTile defaultStyles={{background: "#bf4040"}} backgroundColor="#bf4040">1</BaseTile>
-//     <BaseTile defaultStyles={{background: "#40bf40", flex: 2}} backgroundColor="#40bf40">2</BaseTile>
-// </div>
-// <div className={styles.row}>
-// <BaseTile defaultStyles={{background: "#7f40bf", flex: 2}} backgroundColor="#7f40bf">3</BaseTile>
-//     <BaseTile defaultStyles={{background: "#407fbf"}} backgroundColor="#407fbf">4</BaseTile>
-//     </div>
