@@ -1,8 +1,7 @@
 import React from 'react'
 import styles from './app.css'
-import BaseTile from '../base-tile'
-import Toggle from '../toggle'
 import Tile from '../tile'
+import LightTile from '../light-tile'
 
 class App extends React.Component{
     constructor(props){
@@ -15,18 +14,14 @@ class App extends React.Component{
                 <div className={styles.background}></div>
                 <div className={styles.innerContainer}>
                     <div className={styles.tileContainer}>
+                        <LightTile on={this.state.on} onToggle={val => this.setState({on: val})}/>
+                    </div>
+                    <div className={styles.tileContainer}>
                         <Tile>
-                            <Toggle on={this.state.on} onClick={val => this.setState({on: val})}/>
                         </Tile>
                     </div>
                     <div className={styles.tileContainer}>
                         <Tile>
-                            <Toggle on={this.state.on} onClick={val => this.setState({on: val})}/>
-                        </Tile>
-                    </div>
-                    <div className={styles.tileContainer}>
-                        <Tile>
-                            <Toggle on={this.state.on} onClick={val => this.setState({on: val})}/>
                         </Tile>
                     </div>
                 </div>
