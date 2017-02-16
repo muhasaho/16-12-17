@@ -21,4 +21,6 @@
 .title{
     margin-left: 16px;
     font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }

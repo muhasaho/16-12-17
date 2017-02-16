@@ -14,6 +14,7 @@ function initialize(server, rootPath){
         }
     });
 
+    // /lifx/toggle
     server.route({
         path: path.join(rootPath, "toggle"),
         method: "GET",

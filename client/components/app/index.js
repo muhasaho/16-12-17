@@ -6,7 +6,16 @@ import LightTile from '../light-tile'
 class App extends React.Component{
     constructor(props){
         super(props);
-        this.state = {on: false}
+        this.state = {on: false};
+
+        this.toggleLight = this.toggleLight.bind(this);
+    }
+
+    toggleLight(val){
+        this.setState({on: val});
+        fetch("/lifx/toggle")
+            .then(response => response.json().then((json) => console.log("LIFX Reply: ", json)));
+
     }
     render(){
         return(
@@ -14,7 +23,7 @@ class App extends React.Component{
                 <div className={styles.background}></div>
                 <div className={styles.innerContainer}>
                     <div className={styles.tileContainer}>
-                        <LightTile on={this.state.on} onToggle={val => this.setState({on: val})}/>
+                        <LightTile on={this.state.on} onToggle={val => this.toggleLight(val)}/>
                     </div>
                     <div className={styles.tileContainer}>
                         <Tile>
